@@ -1,6 +1,6 @@
 # Část 2
-V projektu si připravíme okno pro zobrazení databáze piv, můžeme klidně ponechat název MainWindow
-
+V projektu si připravíme okno pro zobrazení databáze piv, můžeme klidně ponechat název MainWindow.
+Budeme potřebovat ext box pro zadávání dotazu, tlačítko pro přidání piva a datagrid na vykreslení jednotlivých záznamů
 
 <Grid>
         <Grid.RowDefinitions>
@@ -31,7 +31,7 @@ V projektu si připravíme okno pro zobrazení databáze piv, můžeme klidně p
         </ScrollViewer>
 </Grid>
 
-V kódu nám přibudou dvě prázdné funkce
+V kódu nám přibudou dvě prázdné funkce, 
 
         private void TxtFilter_OnKeyDown(object sender, KeyEventArgs e)
         {
