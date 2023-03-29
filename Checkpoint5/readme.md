@@ -50,7 +50,6 @@ Kód pro samotné filtrování piv, filtr bude vracet položky, u kterých se bu
                         select p;
 
 
-                    // Update the FilteredPiva collection with the query results
                     FilteredPiva.Clear();
                     foreach (var pivo in query)
                     {
