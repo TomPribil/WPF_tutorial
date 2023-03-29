@@ -118,3 +118,5 @@ Zrušení
             Close();
         }
 
+## MainWindow.xaml.cs
+Ještě je potřeba upravit funkci v hlavním okně, aby se nové okno mohlo otevřít
