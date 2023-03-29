@@ -30,7 +30,7 @@ Vytvoříme metody pro načtení všech piv při spuštění aplikace a upravím
                 }
             }
             
-Kód pro samotné filtrování piv
+Kód pro samotné filtrování piv, filtr bude vracet položky, u kterých se bude input rovnat hodnotě z jakéhokoliv sloupce.
 
     private void TxtFilter_OnKeyDown(object sender, KeyEventArgs e)
             {
