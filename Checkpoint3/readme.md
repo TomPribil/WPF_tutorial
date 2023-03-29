@@ -33,3 +33,54 @@ Třída barva
             public int Id_barvy { get; set; }
             public string Nazev { get; set; }
         }
+
+Třída kraj
+
+    public class Kraj
+        {
+            [Key]
+            public int Id_kraje { get; set; }
+            public string Nazev { get; set; }
+        }
+        
+Třída města
+
+    public class Mesto
+        {
+            [Key]
+            public int Id_mesta { get; set; }
+            public string Nazev { get; set; }
+            public int Id_kraje { get; set; }
+
+            public virtual Kraj Kraj { get; set; }
+        }
+
+Třída pivovary
+
+    public class Pivovary
+        {
+            [Key]
+            public int Id_pivovaru { get; set; }
+            public string Nazev { get; set; }
+            public int Id_mesta { get; set; }
+            public string Web { get; set; }
+            public string Adresa { get; set; }
+        }
+
+Třída stupňovitost
+
+    public class Stupnovitost
+        {
+            [Key]
+            public int Id_stupne { get; set; }
+            public string Nazev { get; set; }
+        }
+        
+Třída Typ piva
+
+    public class TypPiva
+        {
+            [Key]
+            public int Id_typu { get; set; }
+            public string Nazev { get; set; }
+        }
