@@ -3,6 +3,7 @@ Vytvoříme si složku tabulky, kde budou jednotlivé definice tabulek z databá
 Pro každou tabulku je potřeba vytvořit si novou třídu.
 
 Třída pivo
+
     public class Pivo
         {
             [Key]
@@ -25,6 +26,7 @@ Třída pivo
             public virtual Pivovary Pivovary { get; set; }
         }
 Třída barva
+
     public class Barva
         {
             [Key]
