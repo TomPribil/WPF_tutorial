@@ -33,14 +33,14 @@ V projektu si připravíme okno pro zobrazení databáze piv, můžeme klidně p
 
 V kódu nám přibudou dvě prázdné funkce
 
-private void TxtFilter_OnKeyDown(object sender, KeyEventArgs e)
-{
-    throw new NotImplementedException();
-}
+        private void TxtFilter_OnKeyDown(object sender, KeyEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
 
-private void AddBeer_OnClick(object sender, RoutedEventArgs e)
-{
-    throw new NotImplementedException();
-}
+        private void AddBeer_OnClick(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
 
 
