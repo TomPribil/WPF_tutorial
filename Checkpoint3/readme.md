@@ -43,7 +43,7 @@ Třída kraj
             public string Nazev { get; set; }
         }
         
-Třída města
+Třída město
 
     public class Mesto
         {
