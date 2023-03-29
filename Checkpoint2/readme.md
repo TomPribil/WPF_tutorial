@@ -1,7 +1,7 @@
 # Část 2
 V projektu si připravíme okno pro zobrazení databáze piv
 
-'''
+
 <Grid>
                 <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
@@ -30,4 +30,3 @@ V projektu si připravíme okno pro zobrazení databáze piv
                         </DataGrid>
                 </ScrollViewer>
         </Grid>
-'''
