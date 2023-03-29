@@ -1,5 +1,5 @@
 # Část 2
-V projektu si připravíme okno pro zobrazení databáze piv
+V projektu si připravíme okno pro zobrazení databáze piv, můžeme klidně ponechat název MainWindow
 
 
         <Grid>
@@ -30,3 +30,16 @@ V projektu si připravíme okno pro zobrazení databáze piv
                         </DataGrid>
                 </ScrollViewer>
         </Grid>
+V kódu nám přibudou dvě prázdné funkce
+
+        private void TxtFilter_OnKeyDown(object sender, KeyEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void AddBeer_OnClick(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+
