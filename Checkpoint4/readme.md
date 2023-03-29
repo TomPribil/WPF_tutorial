@@ -3,24 +3,21 @@
 ## PivoContext.cs
 Pro připojení projektu k databázi potřebujeme třídu, která bude zajistí komunikaci s enitity framework
 
-    public class Pivo
+    internal class PivoContext : DbContext
         {
-            [Key]
-            public int Id_piva { get; set; }
-            public string Nazev { get; set; }
-            [ForeignKey("Stupnovitost")]
-            public int Id_stupne { get; set; }
-            public int? IBU { get; set; }
-            public decimal? Obsah_alkoholu { get; set; }
-            [ForeignKey("Barva")]
-            public int Id_barvy { get; set; }
-            [ForeignKey("TypPiva")]
-            public int Id_typu { get; set; }
-            [ForeignKey("Pivovary")]
-            public int Id_pivovaru { get; set; }
+            public DbSet<Barva> Barva { get; set; }
+            public DbSet<Kraj> Kraj { get; set; }
+            public DbSet<Mesto> Mesta { get; set; }
+            public DbSet<Pivo> Piva { get; set; }
+            public DbSet<Pivovary> Pivovary { get; set; }
+            public DbSet<Stupnovitost> Stupnovitost { get; set; }
+            public DbSet<TypPiva> TypPiva{ get; set; }
+            //public object Stupnovitosti { get; internal set; }
+            //public object Barvy { get; internal set; }
+            //public object TypyPiva { get; internal set; }
 
-            public virtual Stupnovitost Stupnovitost { get; set; }
-            public virtual Barva Barva { get; set; }
-            public virtual TypPiva TypPiva { get; set; }
-            public virtual Pivovary Pivovary { get; set; }
+            protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+            {
+                optionsBuilder.UseMySQL("SERVER=localhost;DATABASE=pivovary;UID=root;PASSWORD=password;");
+            }
         }
