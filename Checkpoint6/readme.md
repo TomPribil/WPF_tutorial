@@ -120,3 +120,10 @@ Zrušení
 
 ## MainWindow.xaml.cs
 Ještě je potřeba upravit funkci v hlavním okně, aby se nové okno mohlo otevřít
+
+        private void AddBeer_OnClick(object sender, RoutedEventArgs e)
+        {
+            AddPivoWindow addPivoWindow = new AddPivoWindow();
+            addPivoWindow.Show();
+        }
+
