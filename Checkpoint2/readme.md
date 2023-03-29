@@ -2,7 +2,7 @@
 V projektu si připravíme okno pro zobrazení databáze piv
 
 
-<Grid>
+    <Grid>
                 <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="Auto" />
