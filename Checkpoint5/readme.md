@@ -32,29 +32,29 @@ Vytvoříme metody pro načtení všech piv při spuštění aplikace a upravím
             
 Kód pro samotné filtrování piv
 
-        private void TxtFilter_OnKeyDown(object sender, KeyEventArgs e)
+    private void TxtFilter_OnKeyDown(object sender, KeyEventArgs e)
+            {
+                if (e.Key == Key.Enter)
                 {
-                    if (e.Key == Key.Enter)
+                    string filter = txtFilter.Text;
+
+                    var query = from p in _context.Piva
+                            .Include(p => p.Stupnovitost)
+                            .Include(p => p.Barva)
+                            .Include(p => p.TypPiva)
+                            .Include(p => p.Pivovary)
+                        where p.Nazev.Contains(filter)
+                              || p.Barva.Nazev.Contains(filter)
+                              || p.TypPiva.Nazev.Contains(filter)
+                              || p.Pivovary.Nazev.Contains(filter)
+                        select p;
+
+
+                    // Update the FilteredPiva collection with the query results
+                    FilteredPiva.Clear();
+                    foreach (var pivo in query)
                     {
-                        string filter = txtFilter.Text;
-
-                        var query = from p in _context.Piva
-                                .Include(p => p.Stupnovitost)
-                                .Include(p => p.Barva)
-                                .Include(p => p.TypPiva)
-                                .Include(p => p.Pivovary)
-                            where p.Nazev.Contains(filter)
-                                  || p.Barva.Nazev.Contains(filter)
-                                  || p.TypPiva.Nazev.Contains(filter)
-                                  || p.Pivovary.Nazev.Contains(filter)
-                            select p;
-
-
-                        // Update the FilteredPiva collection with the query results
-                        FilteredPiva.Clear();
-                        foreach (var pivo in query)
-                        {
-                            FilteredPiva.Add(pivo);
-                        }
+                        FilteredPiva.Add(pivo);
                     }
                 }
+            }
