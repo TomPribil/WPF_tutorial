@@ -1,6 +1,6 @@
 # Část 2
 V projektu si připravíme okno pro zobrazení databáze piv, můžeme klidně ponechat název MainWindow.
-Budeme potřebovat ext box pro zadávání dotazu, tlačítko pro přidání piva a datagrid na vykreslení jednotlivých záznamů
+Budeme potřebovat 'text box' pro zadávání dotazu, tlačítko pro přidání piva a datagrid na vykreslení jednotlivých záznamů
 
 <Grid>
         <Grid.RowDefinitions>
