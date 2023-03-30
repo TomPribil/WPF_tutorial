@@ -1,5 +1,5 @@
 # Část 1
-Njeprve si stáhněte soubory [soubory](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/TomPribil/WPF_tutorial/tree/main/Checkpoint1/soubory)
+Njeprve si stáhněte [soubory](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/TomPribil/WPF_tutorial/tree/main/Checkpoint1/soubory)
 
 Vytvoříme nový WPF projekt a zkopírujeme do něj docker compose, poté zadáme do konzole docker compose up -d.
 Otevřeme si phpmyadmin na [localhost:8080](http://localhost:8080/) a importujeme databáze pomocí skriptu pivovary.sql
