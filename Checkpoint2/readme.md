@@ -31,7 +31,7 @@ Budeme potřebovat 'text box' pro zadávání dotazu, tlačítko pro přidání 
         </ScrollViewer>
 </Grid>
 
-V kódu nám přibudou dvě prázdné funkce, 
+V kódu nám vzniknou dvě prázdné funkce, 
 
         private void TxtFilter_OnKeyDown(object sender, KeyEventArgs e)
         {
