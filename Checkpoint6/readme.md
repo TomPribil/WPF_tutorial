@@ -92,10 +92,35 @@ Funkce pro přidání piva
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
             if (string.IsNullOrEmpty(txtNazev.Text) || string.IsNullOrEmpty(txtIBU.Text) || string.IsNullOrEmpty(txtObsahAlkoholu.Text) ||
-                cbStupnovitost.SelectedValue == null || cbBarva.SelectedValue == null || 
+                cbStupnovitost.SelectedValue == null || cbBarva.SelectedValue == null ||
                 cbTypPiva.SelectedValue == null || cbPivovar.SelectedValue == null)
             {
                 MessageBox.Show("Před odesláním musíte vyplnit všechny informace!");
+                return;
+            }
+
+            else if(!int.TryParse(txtIBU.Text, out int ibu))
+            {
+                MessageBox.Show("IBU musí být číselná hodnota!");
+                return;
+            }
+
+            else if (!decimal.TryParse(txtObsahAlkoholu.Text, out decimal Obsah_alkoholu))
+            {
+                MessageBox.Show("Obsah alkoholu musí být číselná hodnota!");
+                return;
+
+            }
+
+            else if (ibu < 0 || ibu > 100)
+            {
+                MessageBox.Show("IBU musí být v rozmezí 0 až 100!");
+                return;
+            }
+
+            else if (Obsah_alkoholu < 0 || Obsah_alkoholu > 100)
+            {
+                MessageBox.Show("Obsah alkoholu musí být v rozmezí 0 až 100!");
                 return;
             }
 
