@@ -31,7 +31,6 @@
                 CategoryName = categoryName;
             }
 
-            // Rest of the class code
             private void BttnOk_OnClick(object sender, RoutedEventArgs e)
             {
                 using (var context = new PivoContext())
