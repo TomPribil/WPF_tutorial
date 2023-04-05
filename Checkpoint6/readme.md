@@ -64,7 +64,11 @@ Nechceme psát hodnoty do ComboBoxů ručně, ale aby se automaticky braly z tab
         private void FillComboBoxes()
         {
 
-            cbStupnovitost.ItemsSource = _context.Stupnovitost.ToList();
+            cbStupnovitost.ItemsSource = _context.Stupnovitost.ToList()
+                .OrderBy(s => { int.TryParse(s.Nazev, out int result); 
+                    return result; })
+                .ToList();
+
             cbStupnovitost.DisplayMemberPath = "Nazev";
             cbStupnovitost.SelectedValuePath = "Id_stupne";
 
