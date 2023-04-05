@@ -44,9 +44,10 @@ Kód pro samotné filtrování piv, filtr bude vracet položky, u kterých se bu
                             .Include(p => p.TypPiva)
                             .Include(p => p.Pivovary)
                         where p.Nazev.Contains(filter)
-                              || p.Barva.Nazev.Contains(filter)
-                              || p.TypPiva.Nazev.Contains(filter)
-                              || p.Pivovary.Nazev.Contains(filter)
+                          || p.Barva.Nazev.Contains(filter)
+                          || p.TypPiva.Nazev.Contains(filter)
+                          || p.Pivovary.Nazev.Contains(filter)
+                          || p.Stupnovitost.Nazev.Contains(filter)
                         select p;
 
 
