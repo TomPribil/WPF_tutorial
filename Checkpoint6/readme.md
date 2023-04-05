@@ -24,41 +24,29 @@ Vytvoříme nové okno
         </Grid.ColumnDefinitions>
 
         <Label Grid.Row="0" Grid.Column="0" Content="Název:"/>
-        <TextBox Grid.Row="0" Grid.Column="1" x:Name="txtNazev" VerticalContentAlignment="Center"/>
-        
-        
+        <TextBox Grid.Row="0" Grid.Column="1" x:Name="txtNazev"/>
+
         <Label Grid.Row="1" Grid.Column="0" Content="Stupeň:"/>
-        <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="1">
-            <ComboBox  x:Name="cbStupnovitost" Width="185"/>
-            <Button x:Name="bttnAddStupen" Content="+" Width="20" Click="OnAddCategoryButtonClick"/>
-        </StackPanel>
+        <ComboBox Grid.Row="1" Grid.Column="1" x:Name="cbStupnovitost"/>
 
         <Label Grid.Row="2" Grid.Column="0" Content="IBU:"/>
-        <TextBox Grid.Row="2" Grid.Column="1" x:Name="txtIBU" VerticalContentAlignment="Center"/>
+        <TextBox Grid.Row="2" Grid.Column="1" x:Name="txtIBU"/>
 
         <Label Grid.Row="3" Grid.Column="0" Content="Obsah alkoholu (%):"/>
-        <TextBox Grid.Row="3" Grid.Column="1" x:Name="txtObsahAlkoholu" VerticalContentAlignment="Center"/>
+        <TextBox Grid.Row="3" Grid.Column="1" x:Name="txtObsahAlkoholu"/>
 
         <Label Grid.Row="4" Grid.Column="0" Content="Barva:"/>
-        <StackPanel Orientation="Horizontal" Grid.Row="4" Grid.Column="1">
-            <ComboBox x:Name="cbBarva" Width="185"/>
-            <Button x:Name="bttnAddBarva" Content="+" Width="20" Click="OnAddCategoryButtonClick"/>
-        </StackPanel>
-        
+        <ComboBox Grid.Row="4" Grid.Column="1" x:Name="cbBarva"/>
 
         <Label Grid.Row="5" Grid.Column="0" Content="Typ piva:"/>
-        <StackPanel Orientation="Horizontal" Grid.Row="5" Grid.Column="1">
-            <ComboBox  x:Name="cbTypPiva" Width="185"/>
-            <Button x:Name="bttnAddTyp" Content="+" Width="20" Click="OnAddCategoryButtonClick"/>
-        </StackPanel>
-        
+        <ComboBox Grid.Row="5" Grid.Column="1" x:Name="cbTypPiva"/>
 
         <Label Grid.Row="6" Grid.Column="0" Content="Pivovar:"/>
         <ComboBox Grid.Row="6" Grid.Column="1" x:Name="cbPivovar"/>
-
-        <Button x:Name="btnAdd" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="2" Content="Přidat pivo" Click="BtnAdd_OnClick"/>
-        <Button x:Name="btnCancel" Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="2" Content="Zrušit" Click="BtnCancel_OnClick"/>
+        <Button Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="2" Content="Přidat pivo" Click="btnAdd_Click"/>
+        <Button Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="2" Content="Cancel" Click="btnCancel_Click"/>
       </Grid>
+
 
 Nechceme psát hodnoty do ComboBoxů ručně, ale aby se automaticky braly z tabulek databáze
 
