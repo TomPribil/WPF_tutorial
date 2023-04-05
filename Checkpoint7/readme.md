@@ -3,14 +3,6 @@
 
 ## AddCategoryWindow.xaml
 
-    <Window x:Class="GUI_WPF_Final.AddCategoryWindow"
-            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-            xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-            xmlns:local="clr-namespace:GUI_WPF_Final"
-            mc:Ignorable="d"
-            Title="Přídání vlastnosti" Height="125" Width="200" ResizeMode="NoResize">
         <Grid>
 
             <Grid.RowDefinitions>
@@ -26,9 +18,7 @@
                     Margin="5" Content="Přidat!" Click="BttnOk_OnClick" Width="70"/>
 
         </Grid>
-    </Window>
 
-    
 ## AddCategoryWindow.xaml.cs
     
     public partial class AddCategoryWindow : Window
