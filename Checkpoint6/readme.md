@@ -4,7 +4,7 @@ Vytvoříme nové okno
 ## AddPivoWindow.xaml
 
       <Grid>
-                  <Grid.RowDefinitions>
+        <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
